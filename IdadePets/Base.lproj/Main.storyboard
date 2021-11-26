@@ -16,67 +16,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPets.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvN-zU-vjC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="406" id="Gbq-8x-kFc"/>
-                                    <constraint firstAttribute="width" constant="414" id="ZzZ-1L-VUW"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-Am-wjJ">
-                                <rect key="frame" x="128" y="510" width="158" height="71"/>
-                                <color key="backgroundColor" red="0.33355480430000001" green="0.4046855271" blue="0.43322747950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="aZh-FM-pXr"/>
-                                    <constraint firstAttribute="height" constant="71" id="bap-q0-WEY"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cachorro">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                    <color key="baseForegroundColor" red="0.91492044930000005" green="0.94941025970000004" blue="0.95976382490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="oOc-cZ-rcT" kind="show" id="Vfb-Vl-g4w"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Md-db-sFe">
-                                <rect key="frame" x="128" y="611" width="158" height="71"/>
-                                <color key="backgroundColor" red="0.94773656129999995" green="0.61366242169999996" blue="0.27249497179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="jQm-4b-0E8"/>
-                                    <constraint firstAttribute="width" constant="158" id="tT2-ly-8hw"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Gato">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                    <color key="baseForegroundColor" red="0.91492044930000005" green="0.94941025970000004" blue="0.95976382490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="hQB-r0-lAy" kind="show" id="zBY-n0-D5c"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuba quantos anos humanos o seu Pet tem!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2t-AT-4FY">
-                                <rect key="frame" x="26" y="406" width="362" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="362" id="01T-7s-XtO"/>
-                                    <constraint firstAttribute="height" constant="84" id="VLK-xA-9rY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jCt-kr-AcP">
+                                <rect key="frame" x="0.0" y="107" width="414" height="682"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D0G-Us-rkN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPets.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvN-zU-vjC">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="406" id="Gbq-8x-kFc"/>
+                                                    <constraint firstAttribute="width" constant="414" id="ZzZ-1L-VUW"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-Nt-jgD">
+                                        <rect key="frame" x="26" y="406" width="362" height="276"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iL0-vx-ufB">
+                                                <rect key="frame" x="0.0" y="0.0" width="362" height="84"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuba quantos anos humanos o seu Pet tem!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2t-AT-4FY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="362" height="84"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="362" id="01T-7s-XtO"/>
+                                                            <constraint firstAttribute="height" constant="84" id="VLK-xA-9rY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-cM-qRd">
+                                                <rect key="frame" x="102" y="104" width="158" height="172"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1k1-JL-UYz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="71"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-Am-wjJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="158" height="71"/>
+                                                                <color key="backgroundColor" red="0.33355480430000001" green="0.4046855271" blue="0.43322747950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="158" id="aZh-FM-pXr"/>
+                                                                    <constraint firstAttribute="height" constant="71" id="bap-q0-WEY"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Cachorro">
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                                    <color key="baseForegroundColor" red="0.91492044930000005" green="0.94941025970000004" blue="0.95976382490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="oOc-cZ-rcT" kind="show" id="Vfb-Vl-g4w"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E7F-Cv-u6a">
+                                                        <rect key="frame" x="0.0" y="101" width="158" height="71"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Md-db-sFe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="158" height="71"/>
+                                                                <color key="backgroundColor" red="0.94773656129999995" green="0.61366242169999996" blue="0.27249497179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="71" id="jQm-4b-0E8"/>
+                                                                    <constraint firstAttribute="width" constant="158" id="tT2-ly-8hw"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Gato">
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                                    <color key="baseForegroundColor" red="0.91492044930000005" green="0.94941025970000004" blue="0.95976382490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="hQB-r0-lAy" kind="show" id="zBY-n0-D5c"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="c2t-AT-4FY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Gd-I2-2Ow"/>
-                            <constraint firstItem="c2t-AT-4FY" firstAttribute="top" secondItem="WvN-zU-vjC" secondAttribute="bottom" id="87u-Fk-DdX"/>
-                            <constraint firstItem="Vqe-Am-wjJ" firstAttribute="top" secondItem="c2t-AT-4FY" secondAttribute="bottom" constant="20" id="MRK-WY-AS6"/>
-                            <constraint firstItem="WvN-zU-vjC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UFc-VF-ncU"/>
-                            <constraint firstItem="5Md-db-sFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSj-hl-BI7"/>
-                            <constraint firstItem="5Md-db-sFe" firstAttribute="top" secondItem="Vqe-Am-wjJ" secondAttribute="bottom" constant="30" id="uwj-b1-gaD"/>
-                            <constraint firstItem="Vqe-Am-wjJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yZc-vf-pT7"/>
-                            <constraint firstItem="WvN-zU-vjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yd4-dI-5el"/>
+                            <constraint firstItem="jCt-kr-AcP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1cT-UB-iwb"/>
+                            <constraint firstItem="jCt-kr-AcP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R5K-s9-AEY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="2Sr-y4-Pwd"/>
@@ -93,36 +122,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoPetsGato.png" translatesAutoresizingMaskIntoConstraints="NO" id="L3o-Bs-9dw">
-                                <rect key="frame" x="70" y="117" width="319" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-fT-gpp">
-                                <rect key="frame" x="73" y="625" width="268" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196073060000004" green="0.62745100259999997" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Descobrir idade">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite a idade do seu gato, para descobrir a idade em anos humanos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-1d-dwE">
-                                <rect key="frame" x="16" y="449" width="383" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9d-Bj-AoC">
-                                <rect key="frame" x="148" y="558" width="118" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="CBX-OB-qME">
+                                <rect key="frame" x="15.5" y="146" width="383" height="604"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-LU-jBa">
+                                        <rect key="frame" x="64" y="0.0" width="319" height="338"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPetsGato.png" translatesAutoresizingMaskIntoConstraints="NO" id="L3o-Bs-9dw">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="338"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="319" id="Sv7-q2-08m"/>
+                                                    <constraint firstAttribute="height" constant="338" id="olW-fZ-Zhq"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="B3C-db-OVW">
+                                        <rect key="frame" x="0.0" y="338" width="383" height="266"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HVD-PV-E8U">
+                                                <rect key="frame" x="0.0" y="0.0" width="383" height="119"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a idade do seu gato, para descobrir a idade em anos humanos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-1d-dwE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="383" height="119"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="119" id="GuV-p0-UjU"/>
+                                                            <constraint firstAttribute="width" constant="383" id="aKd-Pz-c6l"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jyz-BW-n2B">
+                                                <rect key="frame" x="132.5" y="130" width="118" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j9d-Bj-AoC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="118" id="DWe-VS-c6L"/>
+                                                            <constraint firstAttribute="height" constant="34" id="oaY-03-UGx"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oVk-oG-5UM">
+                                                <rect key="frame" x="57.5" y="175" width="268" height="91"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-fT-gpp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="91"/>
+                                                        <color key="backgroundColor" red="0.90196073060000004" green="0.62745100259999997" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="91" id="EpK-eG-QzM"/>
+                                                            <constraint firstAttribute="width" constant="268" id="jbG-Zm-BJ9"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Descobrir idade">
+                                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0h7-vX-7xU"/>
                         <color key="backgroundColor" red="0.75843298439999995" green="0.54691582920000004" blue="0.61555188890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CBX-OB-qME" firstAttribute="centerX" secondItem="3nB-9H-cqN" secondAttribute="centerX" id="0B6-MK-ZZI"/>
+                            <constraint firstItem="CBX-OB-qME" firstAttribute="centerY" secondItem="3nB-9H-cqN" secondAttribute="centerY" id="9gi-XA-O1O"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v7k-RY-MzX"/>
                 </viewController>
@@ -138,36 +213,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoPetsCachorro.png" translatesAutoresizingMaskIntoConstraints="NO" id="BEM-M3-Stf">
-                                <rect key="frame" x="22" y="104" width="319" height="338"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-Xo-xqt">
-                                <rect key="frame" x="73" y="621" width="268" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.38823530080000002" green="0.44705885649999999" blue="0.47450977560000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Descobrir idade">
-                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
-                                    <color key="baseForegroundColor" red="0.92941176889999999" green="0.95686274770000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-z1-jdr">
-                                <rect key="frame" x="148" y="553" width="118" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite a idade do seu cachorro, para descobrir a idade em anos humanos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8I-qT-jia">
-                                <rect key="frame" x="16" y="434" width="382" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UvX-cC-Lbu">
+                                <rect key="frame" x="16" y="136" width="382" height="624"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zql-Cy-1CG">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="338"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPetsCachorro.png" translatesAutoresizingMaskIntoConstraints="NO" id="BEM-M3-Stf">
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="338"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="319" id="Xox-DP-UWx"/>
+                                                    <constraint firstAttribute="height" constant="338" id="eEk-cH-tbu"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ooR-jJ-521">
+                                        <rect key="frame" x="0.0" y="346" width="382" height="278"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a idade do seu cachorro, para descobrir a idade em anos humanos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8I-qT-jia">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="111"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="382" id="30G-1d-GaD"/>
+                                                    <constraint firstAttribute="height" constant="111" id="VOu-v6-WI9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-z1-jdr">
+                                                <rect key="frame" x="132" y="132" width="118" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="118" id="1km-XS-6zz"/>
+                                                    <constraint firstAttribute="height" constant="34" id="8k9-ph-FTE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-Xo-xqt">
+                                                <rect key="frame" x="57" y="187" width="268" height="91"/>
+                                                <color key="backgroundColor" red="0.38823530080000002" green="0.44705885649999999" blue="0.47450977560000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="CJn-9m-8RL"/>
+                                                    <constraint firstAttribute="width" constant="268" id="onw-yE-A2b"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Descobrir idade">
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="31"/>
+                                                    <color key="baseForegroundColor" red="0.92941176889999999" green="0.95686274770000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l4I-lK-U5w"/>
                         <color key="backgroundColor" red="0.48985821010000002" green="0.48599416020000002" blue="0.66797661779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UvX-cC-Lbu" firstAttribute="centerY" secondItem="2UI-b7-J1l" secondAttribute="centerY" id="LFR-Lc-QuP"/>
+                            <constraint firstItem="UvX-cC-Lbu" firstAttribute="centerX" secondItem="2UI-b7-J1l" secondAttribute="centerX" id="l01-9X-wOH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BF4-Kb-qEz"/>
                 </viewController>
