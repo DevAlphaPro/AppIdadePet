@@ -16,14 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoPets.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvN-zU-vjC">
-                                <rect key="frame" x="0.0" y="57" width="414" height="406"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPets.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvN-zU-vjC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="406"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="406" id="Gbq-8x-kFc"/>
+                                    <constraint firstAttribute="width" constant="414" id="ZzZ-1L-VUW"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-Am-wjJ">
-                                <rect key="frame" x="128" y="530" width="158" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-Am-wjJ">
+                                <rect key="frame" x="128" y="510" width="158" height="71"/>
                                 <color key="backgroundColor" red="0.33355480430000001" green="0.4046855271" blue="0.43322747950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="aZh-FM-pXr"/>
+                                    <constraint firstAttribute="height" constant="71" id="bap-q0-WEY"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cachorro">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
@@ -33,10 +39,13 @@
                                     <segue destination="oOc-cZ-rcT" kind="show" id="Vfb-Vl-g4w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Md-db-sFe">
-                                <rect key="frame" x="128" y="633" width="158" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Md-db-sFe">
+                                <rect key="frame" x="128" y="611" width="158" height="71"/>
                                 <color key="backgroundColor" red="0.94773656129999995" green="0.61366242169999996" blue="0.27249497179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="jQm-4b-0E8"/>
+                                    <constraint firstAttribute="width" constant="158" id="tT2-ly-8hw"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Gato">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
@@ -46,9 +55,12 @@
                                     <segue destination="hQB-r0-lAy" kind="show" id="zBY-n0-D5c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descuba quantos anos humanos o seu Pet tem!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2t-AT-4FY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuba quantos anos humanos o seu Pet tem!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2t-AT-4FY">
                                 <rect key="frame" x="26" y="406" width="362" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="362" id="01T-7s-XtO"/>
+                                    <constraint firstAttribute="height" constant="84" id="VLK-xA-9rY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +68,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="c2t-AT-4FY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Gd-I2-2Ow"/>
+                            <constraint firstItem="c2t-AT-4FY" firstAttribute="top" secondItem="WvN-zU-vjC" secondAttribute="bottom" id="87u-Fk-DdX"/>
+                            <constraint firstItem="Vqe-Am-wjJ" firstAttribute="top" secondItem="c2t-AT-4FY" secondAttribute="bottom" constant="20" id="MRK-WY-AS6"/>
+                            <constraint firstItem="WvN-zU-vjC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UFc-VF-ncU"/>
+                            <constraint firstItem="5Md-db-sFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSj-hl-BI7"/>
+                            <constraint firstItem="5Md-db-sFe" firstAttribute="top" secondItem="Vqe-Am-wjJ" secondAttribute="bottom" constant="30" id="uwj-b1-gaD"/>
+                            <constraint firstItem="Vqe-Am-wjJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yZc-vf-pT7"/>
+                            <constraint firstItem="WvN-zU-vjC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yd4-dI-5el"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="2Sr-y4-Pwd"/>
                 </viewController>
